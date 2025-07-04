@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Package Plans</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css" type="text/css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="text/javascript" src="../backend/main.js"></script>
+
+</head>
+<body>
+
+  <header id="mainHeader" class="header">
+    <div class="logo">
+      <a href="../index.html"><img src="../Logo/logo.png" alt=""></a>
+    </div>
+    <nav>
+      <ul id="main-nav"></ul> <!-- Placeholder for JS injection -->
+
+      <div class="menu-toggle" onclick="openMenu()">
+        <div><img src="../Logo/sidemenu.svg"></div>
+      </div>
+    </nav>
+
+  </header>
+
+
+  <div class="side-menu" id="sideMenu">
+<div class="close-btn" onclick="closeMenu()">✕</div>
+<ul id="side-menu-list"></ul> <!-- Inject here via JS -->
+</div>
+
+
+                <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+
+
+
+
+  <section class="hero" style=" height: 90vh;  background: linear-gradient(180deg, rgba(0,0,0,0.4), rgba(0,0,0,2)), url('../images/about-bg.png') no-repeat center center/cover;
+">
+    <div class="hero-content">
+
+      <h1>who we are?</h1>
+      <p>At EBK Corporation, we build smart, scalable, and secure digital<br>solutions using artificial intelligence and modern software engineering<p>
+<!-- Card Container (you can place this wherever you want on your page) -->
+
+    </div>
+
+</div>
+    </div>
+
+  </section>
+
+
+  <section class="content-viewer" id="blog-list">
+    <p>Loading blogs...</p>
+  </section>
+
+
+
+
+   <!-- Projects Section -->
+
+
+
+
+
+
+      <section class="section" style="text-align: center; align-itemsL center;">
+        <h2 style="font-size: 56px;">Stay up to date </h2>
+        <div class="btns-container">
+        <input type="email" placeholder="example@gmail.com"><a href="#">Subscribe ></a>
+        </div>
+
+
+      </section>
+      <footer>
+  <div id="footer-links" class="footer-links"></div>
+
+  <div class="footer-copy">
+    © 2025 EBK CORPORATION LTD. All rights reserved.
+  </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Package Plans</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css" type="text/css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="text/javascript" src="../backend/main.js"></script>
+
+</head>
+<body>
+  <header id="mainHeader" class="header">
+    <div class="logo">
+      <a href="../index.html"><img src="../Logo/logo.png" alt=""></a>
+    </div>
+    <nav>
+      <ul id="main-nav"></ul> <!-- Placeholder for JS injection -->
+
+      <div class="menu-toggle" onclick="openMenu()">
+        <div><img src="../Logo/sidemenu.svg"></div>
+      </div>
+    </nav>
+
+  </header>
+
+
+  <div class="side-menu" id="sideMenu">
+<div class="close-btn" onclick="closeMenu()">✕</div>
+<ul id="side-menu-list"></ul> <!-- Inject here via JS -->
+</div>
+
+
+                <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+
+
+
+
+  <section class="hero" style="  background: linear-gradient(180deg, rgba(0,0,0,0.4), rgba(0,0,0,2)), url('../images/personal-bg-img.png') no-repeat center center/cover;
+">
+    <div class="hero-content">
+      <div class="btns-container" style="padding: 10px; padding-top: 50px; margin: 10px; margin-top: 60px;">
+     <a href="#" style="background: rgba(255, 255, 255, 0.2);">Personal</a><a href="business.html">Business</a>
+    </div>
+      <h1>Personal Service<br>plans for Users</h1>
+      <p>See Business service plans starting from $299/MO with 7 days trial  <a href="business.html" style="rgba(255, 255, 255, 0.2);">business ></a></p>
+
+<!-- Card Container (you can place this wherever you want on your page) -->
+<div class="flex flex-col md:flex-row gap-6 justify-center items-center p-4" style="margin-top: 20px;">
+
+    <!-- Roam Card -->
+    <div class="card-blur-effect rounded-2x1 p-8 flex flex-col items-start w-full md:w-1/2 lg:w-2/5
+                shadow-lg  text-white">
+        <h2 class="text-3xl font-bold mb-4 text-left uppercase">Basic</h2>
+        <p class="text-gray-300 mb-6 text-left">
+            Connect from almost anywhere on land, with portable high-speed,
+
+        </p>
+        <div class="btns-container">
+        <button>Buy now</button> <a href="#">service details ></a>
+      </div>
+
+    </div>
+
+    <!-- Residential Card -->
+    <div class="card-blur-effect rounded-2x1 p-8 flex flex-col items-start w-full md:w-1/2 lg:w-2/5
+                shadow-lg  text-white">
+        <h2 class="text-3xl font-bold mb-4 text-left uppercase">Advance</h2>
+        <p class="text-gray-300 mb-6 text-left">
+            High-speed internet designed for your home, providing reliable connectivity
+
+        </p>
+        <div class="btns-container">
+        <button>Buy now</button> <a href="#">Service details ></a>
+      </div>
+
+    </div>
+
+</div>
+    </div>
+
+  </section>
+
+  <section class="section" style="text-align: center; align-itemsL center;">
+    <h2 style="font-size: 46px;">Use cases</h2>
+    <div class="btns-container">
+    </div>
+  </section>
+
+  <section class="use-cases container-case">
+  <div class="case-row">
+    <div class="case-card">
+      <div class="bg-layer portfolio"></div>
+      <div class="overlay-use">
+        <h3>Personal Portfolio</h3>
+        <p>Showcase your work, CV download, and contact info beautifully.</p>
+      </div>
+    </div>
+    <div class="case-card">
+      <div class="bg-layer youtube"></div>
+      <div class="overlay-use">
+        <h3>YouTube Channel Site</h3>
+        <p>Embed latest videos, add bio, and drive subscriber growth.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="case-row">
+    <div class="case-card">
+      <div class="bg-layer resume"></div>
+      <div class="overlay-use">
+        <h3>Resume / CV Site</h3>
+        <p>One-page resume site with downloadable CV and contact form.</p>
+      </div>
+    </div>
+    <div class="case-card">
+      <div class="bg-layer fitness"></div>
+      <div class="overlay-use">
+        <h3>Fitness / Coaching Page</h3>
+        <p>Highlight your services, schedule sessions, and use AI chat.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="case-row">
+    <div class="case-card">
+      <div class="bg-layer influencer"></div>
+      <div class="overlay-use">
+        <h3>Creator / Influencer Site</h3>
+        <p>Link-in-bio site with announcements, email-signup and socials.</p>
+      </div>
+    </div>
+    <!-- Add more cards here if needed -->
+  </div>
+</section>
+
+
+
+
+
+      <section class="section" style="text-align: center; align-itemsL center;">
+        <h2 style="font-size: 56px;">Stay up to date </h2>
+        <div class="btns-container">
+        <input type="email" placeholder="example@gmail.com"><a href="#">Subscribe ></a>
+        </div>
+
+
+      </section>
+      <footer>
+  <div id="footer-links" class="footer-links"></div>
+
+  <div class="footer-copy">
+    © 2025 EBK CORPORATION LTD. All rights reserved.
+  </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Package Plans</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css" type="text/css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="text/javascript" src="../backend/main.js"></script>
+  <style media="screen" type="text/css">
+
+  .btns-container a{
+    backdrop-filter: blur(10px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%); /* For Safari support */
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly visible white with transparency */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  }
+
+  </style>
+</head>
+<body>
+  <header id="mainHeader" class="header">
+    <div class="logo">
+      <a href="../index.html"><img src="../Logo/logo.png" alt=""></a>
+    </div>
+    <nav>
+      <ul id="main-nav"></ul> <!-- Placeholder for JS injection -->
+
+      <div class="menu-toggle" onclick="openMenu()">
+        <div><img src="../Logo/sidemenu.svg"></div>
+      </div>
+    </nav>
+
+  </header>
+
+
+  <div class="side-menu" id="sideMenu">
+<div class="close-btn" onclick="closeMenu()">✕</div>
+<ul id="side-menu-list"></ul> <!-- Inject here via JS -->
+</div>
+
+
+                <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+
+
+
+
+  <section class="hero" style=" height: 90vh;  background: linear-gradient(180deg, rgba(0,0,0,0.4), rgba(0,0,0,2)), url('../images/launch.png') no-repeat center center/cover;
+">
+    <div class="hero-content">
+      <div class="btns-container" style="padding: 10px; padding-top: 50px; margin: 10px; margin-top: 60px;">
+     <a href="projects.html" >Completed</a><a href="upcomingproject.html" style="text-decoration: underline;">Upcoming</a>
+    </div>
+      <h1>Upcoming Projects</h1>
+      <p>Learn about our upcoming OSCURE AI project<a href="business.html" style="rgba(255, 255, 255, 0.2);">Learn more ></a></p>
+
+<!-- Card Container (you can place this wherever you want on your page) -->
+
+    </div>
+
+</div>
+    </div>
+
+  </section>
+
+
+
+   <!-- Projects Section -->
+   <section class="bg-black px-6 py-20 md:px-20 space-y-32">
+
+     <!-- Project 1 -->
+     <div class="md:flex md:items-center md:gap-16">
+       <div class="md:w-1/2">
+         <img src="../Logo/FF - logo.png" alt="FitFlow" class="rounded-xl shadow-xl" style="height: 300px;"/>
+       </div>
+       <div class="md:w-1/2 mt-10 md:mt-0">
+         <h2 class="text-3xl font-semibold">FitFlow – Ai Powered<br>Fitness Tracker</h2>
+         <p class="mt-4 text-gray-300">
+           FitFlow is an intelligent fitness companion that tracks your body metrics, adapts workouts using AI, and helps you achieve your health goals faster. Coming soon to Android and iOS.
+         </p>
+         <a href="business.html">Learn more ></a>
+       </div>
+     </div>
+
+     <!-- Project 2 -->
+     <div class="md:flex md:flex-row-reverse md:items-center md:gap-16">
+       <div class="md:w-1/2">
+         <img src="https://source.unsplash.com/800x600/?dashboard,software" alt="Client Dashboards" class="rounded-xl shadow-xl"/>
+       </div>
+       <div class="md:w-1/2 mt-10 md:mt-0">
+         <h2 class="text-3xl font-semibold">Suplash - IDE powered by AI</h2>
+         <p class="mt-4 text-gray-300">
+           We build custom web dashboards for creators, businesses, and developers — ranging from personal portfolios to advanced software management portals.
+         </p>
+         <a href="business.html">Learn more ></a>
+       </div>
+     </div>
+
+     <!-- Project 3 -->
+     <div class="md:flex md:items-center md:gap-16">
+       <div class="md:w-1/2">
+         <img src="https://source.unsplash.com/800x600/?security,technology" alt="AI Security Tools" class="rounded-xl shadow-xl"/>
+       </div>
+       <div class="md:w-1/2 mt-10 md:mt-0">
+         <h2 class="text-3xl font-semibold">Oscure AI – Privacy & Monitoring</h2>
+         <p class="mt-4 text-gray-300">
+           Oscure AI is an advanced system for security monitoring, alert systems, and intelligent logging — designed for modern apps and scalable systems.
+         </p>
+         <a href="business.html">Learn more ></a>
+       </div>
+     </div>
+
+   </section>
+
+
+
+
+
+      <section class="section" style="text-align: center; align-itemsL center;">
+        <h2 style="font-size: 56px;">Stay up to date </h2>
+        <div class="btns-container">
+        <input type="email" placeholder="example@gmail.com"><a href="#">Subscribe ></a>
+        </div>
+
+
+      </section>
+      <footer>
+  <div id="footer-links" class="footer-links"></div>
+
+  <div class="footer-copy">
+    © 2025 EBK CORPORATION LTD. All rights reserved.
+  </div>
+  </footer>
+
+</body>
+</html>

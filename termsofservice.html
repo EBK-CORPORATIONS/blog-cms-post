@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EBKCORP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css" type="text/css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="text/javascript" src="../backend/main.js">
+
+  </script>
+</head>
+<body>
+  <header id="mainHeader" class="header">
+    <div class="logo">
+      <a href="../index.html"><img src="../Logo/logo.png" alt=""></a>
+    </div>
+    <nav>
+      <ul id="main-nav"></ul> <!-- Placeholder for JS injection -->
+
+      <div class="menu-toggle" onclick="openMenu()">
+        <div><img src="../Logo/sidemenu.svg"></div>
+      </div>
+    </nav>
+
+  </header>
+  <div class="side-menu" id="sideMenu">
+<div class="close-btn" onclick="closeMenu()">✕</div>
+<ul id="side-menu-list"></ul> <!-- Inject here via JS -->
+</div>
+
+
+
+
+
+      <main class="document-wrapper">
+    <div class="container-text document">
+      <iframe src="https://docs.google.com/document/d/e/2PACX-1vQ7SdCXMHAVBM0wIgpK92dc1GQo_resuz_wYz4rVkP8vvH-yf5LyhZ2zWexoyczKz3fF8ZhtCd9fI4F/pub?embedded=true"></iframe>
+    </div>
+  </main>
+
+
+      <section class="section" style="text-align: center; align-itemsL center;">
+        <h2 style="font-size: 56px;">Stay up to date </h2>
+        <div class="btns-container">
+        <input type="email" placeholder="example@gmail.com"><a href="#">Subscribe ></a>
+        </div>
+
+
+      </section>
+      <footer>
+  <div id="footer-links" class="footer-links"></div>
+
+  <div class="footer-copy">
+    © 2025 EBK CORPORATION LTD. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>

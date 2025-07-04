@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Package Plans</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css" type="text/css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="text/javascript" src="../backend/main.js"></script>
+
+</head>
+<body>
+  <header id="mainHeader" class="header">
+    <div class="logo">
+      <a href="../index.html"><img src="../Logo/logo.png" alt=""></a>
+    </div>
+    <nav>
+      <ul id="main-nav"></ul> <!-- Placeholder for JS injection -->
+
+      <div class="menu-toggle" onclick="openMenu()">
+        <div><img src="../Logo/sidemenu.svg"></div>
+      </div>
+    </nav>
+
+  </header>
+
+
+  <div class="side-menu" id="sideMenu">
+<div class="close-btn" onclick="closeMenu()">✕</div>
+<ul id="side-menu-list"></ul> <!-- Inject here via JS -->
+</div>
+
+
+                <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+
+
+
+
+  <section class="hero" style=" height: 90vh;  background: linear-gradient(180deg, rgba(0,0,0,0.4), rgba(0,0,0,2)), url('../images/about-bg.png') no-repeat center center/cover;
+">
+    <div class="hero-content">
+
+      <h1>who we are?</h1>
+      <p>At EBK Corporation, we build smart, scalable, and secure digital<br>solutions using artificial intelligence and modern software engineering<p>
+<!-- Card Container (you can place this wherever you want on your page) -->
+
+    </div>
+
+</div>
+    </div>
+
+  </section>
+
+
+
+   <!-- Projects Section -->
+   <section class="bg-black px-6 py-20 md:px-20 space-y-32">
+
+     <!-- Project 1 -->
+     <div class="md:flex md:items-center md:gap-16">
+       <div class="md:w-1/2">
+         <img src="../images/mission.png"  alt="FitFlow" class="rounded-xl shadow-xl"/>
+       </div>
+       <div class="md:w-1/2 mt-10 md:mt-0">
+         <h2 class="text-3xl font-semibold">Mission</h2>
+         <p class="mt-4 text-gray-300">
+           "To engineer intelligent software systems that empower individuals and businesses through automation, efficiency, and innovation — redefining the future with AI."
+         </p>
+         <p>
+          At EBK Corporation, we aim to simplify complexity using cutting-edge artificial intelligence and human-centered design. We’re not just building tools — we’re building intelligent ecosystems that evolve with the world’s needs.
+         </p>
+       </div>
+     </div>
+
+     <!-- Project 2 -->
+     <div class="md:flex md:flex-row-reverse md:items-center md:gap-16">
+       <div class="md:w-1/2">
+         <img src="../images/values.png" alt="Client Dashboards" class="rounded-xl shadow-xl"/>
+       </div>
+       <div class="md:w-1/2 mt-10 md:mt-0" >
+         <h2 class="text-3xl font-semibold">Core values</h2>
+         <p class="mt-4 text-white-bolder" >
+           At EBK Corporation, our values are the foundation of everything we build — from the code we write to the people we serve. We believe real innovation is not just about technology, but about creating lasting impact through purpose-driven work.
+         </p>
+         <h1 style="font-size: 17px; font-weight: bolder; text-transform: uppercase;">Intelligence with Purpose</h1>
+         <p>We don't build AI for the sake of complexity — we build smart systems that solve real problems, improve lives, and deliver measurable value.</p>
+         <h1 style="font-size: 17px; font-weight: bolder; text-transform: uppercase;">Innovation First</h1>
+         <p>We constantly push the boundaries of what’s possible in software, AI, and digital systems — experimenting, learning, and evolving every day.</p>
+         <h1 style="font-size: 17px; font-weight: bolder; text-transform: uppercase;">Trust and Transparency</h1>
+         <p>Whether it's with clients, partners, or end-users, we commit to being honest, reliable, and ethical in everything we do.</p>
+         <h1 style="font-size: 17px; font-weight: bolder; text-transform: uppercase;">Simplicity by Design</h1>
+         <p>We believe great technology should feel invisible — intuitive, seamless, and designed with the user in mind.</p>
+         <h1 style="font-size: 17px; font-weight: bolder; text-transform: uppercase;">Growth through Collaboration</h1>
+         <p>We grow by working with great minds. Internally, we build a culture of creativity and respect. Externally, we treat our clients as partners in progress.</p>
+
+
+
+
+
+
+
+       </div>
+     </div>
+
+     <!-- Project 3 -->
+     <div class="md:flex md:items-center md:gap-16">
+       <div class="md:w-1/2">
+         <img src="../images/innovation.png" alt="AI Security Tools" class="rounded-xl shadow-xl"/>
+       </div>
+       <div class="md:w-1/2 mt-10 md:mt-0">
+         <h2 class="text-3xl font-semibold">innovation</h2>
+         <p class="mt-4 text-gray-300">
+           We combine artificial intelligence with practical use cases to create solutions that:
+
+Learn from user behavior and data patterns (AI/ML-driven)
+
+Automate decision-making and reduce human error
+
+Integrate seamlessly across cloud and edge devices
+
+Deliver performance, security, and scalability at global scale
+         </p>
+         <p>
+           Tech stack we use:
+
+          Python · JavaScript · React · Node.js · Firebase · TensorFlow · OpenAI API · Docker · TailwindCSS
+         </p>
+       </div>
+     </div>
+
+   </section>
+
+
+
+
+
+      <section class="section" style="text-align: center; align-itemsL center;">
+        <h2 style="font-size: 56px;">Stay up to date </h2>
+        <div class="btns-container">
+        <input type="email" placeholder="example@gmail.com"><a href="#">Subscribe ></a>
+        </div>
+
+
+      </section>
+      <footer>
+  <div id="footer-links" class="footer-links"></div>
+
+  <div class="footer-copy">
+    © 2025 EBK CORPORATION LTD. All rights reserved.
+  </div>
+  </footer>
+
+</body>
+</html>
