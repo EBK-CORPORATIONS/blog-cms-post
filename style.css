@@ -1,0 +1,862 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+h2{
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 12px 50px;
+  background: #fff;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            padding: 25px 80px;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            /* Initial transparent state */
+            background-color: transparent;
+            color: #fff; /* Text color for transparent state */
+            box-shadow: none; /* No shadow initially */
+
+            /* Smooth transition for background, color, and shadow */
+            transition: background-color 0.3s ease-in-out,
+                        color 0.3s ease-in-out,
+                        box-shadow 0.3s ease-in-out;
+        }
+
+        /* Styles when the header is scrolled */
+        .header.scrolled {
+          backdrop-filter: blur(10px) saturate(180%);
+          -webkit-backdrop-filter: blur(10px) saturate(180%); /* For Safari support */
+          background-color: #212121cc; /* Slightly visible white with transparency */
+          color: #fff;
+
+        }
+
+        /* Adjust navigation link colors for the scrolled state */
+        .header.scrolled .nav-link {
+            color: #fff; /* Darker link color */
+        }
+
+        .header.scrolled .nav-link:hover {
+        }
+
+        /* --- Logo and Nav Link Basic Styling (example) --- */
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+
+        }
+        .header .logo img{
+          height: 45px;
+        }
+
+        .header nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 1px; /* Space between nav items */
+            padding-right: 60px;
+        }
+
+        .header nav ul li a {
+            text-decoration: none;
+            font-weight: bolder;
+            /* Inherits color from .header or .header.scrolled */
+            transition: color 0.3s ease-in-out;
+            font-weight: bolder;
+            font-size: 14px;
+        }
+
+
+
+
+
+nav a {
+  color: #fff;
+  margin-left: 25px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+}
+
+
+menu-toggle {
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+    }
+
+    .menu-toggle div {
+      position: fixed;
+      right: 73px;
+      top:31.9px;
+    height: 33px;
+    width: 33px;
+    text-align: center;
+    justify-content: center;
+    align-self: center;
+    display: flex;
+    cursor: pointer;
+    margin-bottom: 1px;
+    align-content: center;
+
+    }
+    .menu-toggle img{
+      height: 32px;
+    }
+
+    .side-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 270px;
+      height: 100%;
+      background: black;
+      transition: 0.4s ease;
+      padding: 40px 40px;
+      z-index: 1020;
+    }
+
+    .side-menu.active {
+      right: 0;
+    }
+
+    .side-menu .close-btn {
+      font-size: 20px;
+      cursor: pointer;
+      text-align: left;
+    }
+
+    .side-menu ul {
+      list-style: none;
+      margin-top: 40px;
+    }
+
+    .side-menu ul li {
+      margin: 40px 0;
+      border-bottom: 1.1px solid #333;
+
+    }
+
+    .side-menu ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: bold;
+      transition: 0.3s;
+      text-transform: uppercase;
+    }
+
+
+    /* Optional: backdrop effect */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      background: rgba(0,0,0,0.6);
+      z-index: 998;
+      display: none;
+    }
+
+    .overlay.active {
+      display: block;
+    }
+.hero {
+  height: 145vh;
+  display: flex;
+  background-position: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(0,0,0,0.4), rgba(0,0,0,2)), url('images/main-image.png') no-repeat center center/cover;
+}
+
+.hero-content {
+  max-width: 100vw;
+  margin-bottom: 150px;
+}
+
+.hero h1 {
+  font-size: 70px;
+  font-weight: 600;
+  line-height: 0.9;
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: bolder;
+  text-rendering: optimizeLegibility;
+  text-transform: uppercase;
+}
+
+.hero p {
+  font-size: 20px;
+  color: #ffd;
+  margin-bottom: 40px;
+  font-weight: bolder;
+}
+
+ .hero button {
+  padding: 12px 24px;
+  font-size: 13px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bolder;
+  transition: background 0.3s ease;
+  margin: 7px;
+
+}
+
+.hero button:hover {
+  background-color: #fffd;
+}
+.btns-container{
+  display: inline-flex;
+  margin: 10px;
+}
+
+.hero a {
+ padding: 12px 24px;
+ font-size: 13px;
+ background-color: none;
+ color: #fff;
+ border: 1.3px solid rgba(255, 255, 255, 0.2);
+ border-radius: 3px;
+ cursor: pointer;
+ font-weight: bolder;
+ transition: background 0.3s ease;
+ margin: 7px;
+
+
+}
+
+.hero a:hover {
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%); /* For Safari support */
+  background-color: rgba(255, 255, 255, 0.1); /* Slightly visible white with transparency */
+  border: 1.3px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+}
+
+.section {
+  padding: 100px 50px;
+  background-color: black;
+}
+
+.section h2 {
+  font-size: 36px;
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: bolder;
+}
+
+.section p {
+  color: #fff;
+  font-size: 18px;
+  max-width: 700px;
+  font-weight: bolder;
+
+}
+
+
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+
+  }
+
+  .hero button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .section {
+    padding: 60px 20px;
+  }
+}
+
+.card-blur-effect {
+        backdrop-filter: blur(10px) saturate(180%);
+        -webkit-backdrop-filter: blur(10px) saturate(180%);
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+
+
+    .section button {
+     padding: 12px 24px;
+     font-size: 13px;
+     background-color: #fff;
+     color: #000;
+     border: none;
+     border-radius: 3px;
+     cursor: pointer;
+     font-weight: bolder;
+     transition: background 0.3s ease;
+     margin: 7px;
+
+   }
+
+    .section button:hover {
+      background-color: #fffd;
+}
+
+.section a {
+ padding: 12px 24px;
+ font-size: 13px;
+ background-color: none;
+ color: #fff;
+ border: 1.3px solid rgba(255, 255, 255, 0.2);
+ border-radius: 3px;
+ cursor: pointer;
+ font-weight: bolder;
+ transition: background 0.3s ease;
+ margin: 7px;
+
+
+}
+
+
+.section a:hover {
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%); /* For Safari support */
+  background-color: rgba(255, 255, 255, 0.1); /* Slightly visible white with transparency */
+  border: 1.3px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+}
+
+.starlink-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* adjust as needed */
+    background-image: url('images/ai-img.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 40px;
+    overflow: hidden;
+}
+
+.starlink-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+        circle at top left,
+        rgba(0, 0, 0, 0.6) 0%,
+        rgba(0, 0, 0, 0.3) 20%,
+        rgba(0, 0, 0, 0.0) 50%
+    );
+    z-index: 1;
+    pointer-events: none;
+}
+
+.starlink-content {
+    position: relative;
+    z-index: 2; /* Keep content above the overlay */
+    color: white;
+}
+
+        .starlink-section p{
+          font-weight: bolder;
+          text-shadow: 1px 2px 5px rgba(0 ,0 ,0,0.6);
+        }
+
+        .starlink-section a {
+         padding: 12px 24px;
+         font-size: 13px;
+         background-color: none;
+         color: #fff;
+         border: 1.3px solid rgba(255, 255, 255, 0.2);
+         border-radius: 3px;
+         cursor: pointer;
+         font-weight: bolder;
+         transition: background 0.3s ease;
+         margin: 7px;
+
+
+        }
+
+        .starlink-section a:hover {
+          backdrop-filter: blur(10px) saturate(180%);
+          -webkit-backdrop-filter: blur(10px) saturate(180%); /* For Safari support */
+          background-color: rgba(255, 255, 255, 0.1); /* Slightly visible white with transparency */
+          border: 1.3px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+
+        }
+        .starlink-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px; /* Reduced max-width to occupy left portion */
+            /* Remove margin: 0 auto as we are left aligning */
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end; /* Left-align items within the content block */
+            text-align: left; /* Ensure text itself is left-aligned */
+            align-items: left;
+        }
+        .starlink-headline {
+            font-size: 2.4rem; /* Larger font for headline */
+            font-weight: 700; /* Bold */
+            line-height: 1;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em; /* Slightly increased letter spacing */
+        }
+        .starlink-subheadline {
+            font-size: 1rem; /* Smaller sub-headline */
+            font-weight: 400;
+            line-height: 1.4;
+            margin-bottom: 2rem;
+        }
+
+
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .starlink-section {
+                padding-left: 3rem; /* Adjust left padding for tablets */
+            }
+            .starlink-content {
+                max-width: 500px; /* Adjust max-width for tablets */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .starlink-section {
+                padding-left: 2rem; /* Ensure consistent padding for smaller screens */
+                justify-content: center; /* Center content on smaller screens if desired */
+                text-align: center; /* Center text on smaller screens */
+            }
+            .starlink-content {
+                max-width: 90%; /* Allow content to take more width on small screens */
+                align-items: center; /* Center items for better mobile readability */
+                text-align: center; /* Center text for better mobile readability */
+            }
+            .starlink-headline {
+                font-size: 2.25rem;
+            }
+            .starlink-subheadline {
+                font-size: 1.25rem;
+            }
+
+        }
+
+        @media (max-width: 480px) {
+            .starlink-section {
+                padding-left: 1rem;
+                padding-right: 1rem; /* Ensure right padding too */
+            }
+            .starlink-headline {
+                font-size: 1.75rem;
+            }
+            .starlink-subheadline {
+                font-size: 1rem;
+            }
+            .starlink-button {
+                padding: 0.7rem 1.8rem;
+                width: 90%; /* Make button wider on small screens */
+            }
+        }
+
+        .container {
+            display: flex; /* Makes children flex items */
+            background-color: black;
+            color: white;
+            width: 80%; /* Adjust as needed */
+            max-width: 1200px; /* Max width for larger screens */
+            border-radius: 8px; /* Slightly rounded corners */
+            overflow: hidden; /* Ensures content stays within rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+            padding: 100px 50px;
+            background-color: black;
+        }
+
+        .content-div {
+            flex: 1; /* Takes up available space */
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Vertically center content */
+        }
+
+        .image-div {
+            flex: 1; /* Takes up available space */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px; /* Padding around the image */
+        }
+
+        .image-div img {
+            max-width: 70%; /* Ensure image fits within its div */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 4px; /* Slightly rounded image corners */
+        }
+        .container h2 {
+          font-size: 36px;
+          color: #fff;
+          margin-bottom: 20px;
+          font-weight: bolder;
+        }
+
+        .container p {
+          color: #fff;
+          font-size: 18px;
+          max-width: 700px;
+          font-weight: bolder;
+
+        }
+
+        .container h2{
+          line-height: 1;
+        }
+        .container a {
+         padding: 12px 24px;
+         font-size: 13px;
+         background-color: none;
+         color: #fff;
+         border: 1.3px solid rgba(255, 255, 255, 0.2);
+         border-radius: 3px;
+         cursor: pointer;
+         font-weight: bolder;
+         transition: background 0.3s ease;
+         margin: 7px;
+
+
+        }
+
+        .container a:hover {
+          backdrop-filter: blur(10px) saturate(180%);
+          -webkit-backdrop-filter: blur(10px) saturate(180%); /* For Safari support */
+          background-color: rgba(255, 255, 255, 0.1); /* Slightly visible white with transparency */
+          border: 1.3px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+        }
+        .section input {
+          height: 43px;
+          border: 1.3px solid rgba(255, 255, 255, 0.2) ;
+          padding: 20px 24px;
+          outline: none;
+          margin-top: 8px;
+          background: none;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Stack divs vertically on smaller screens */
+                width: 95%;
+            }
+            .content-div, .image-div {
+                flex: none; /* Remove flex grow on smaller screens */
+                width: auto;
+            }
+        }
+        /* --- Side Menu Styling for Mobile --- */
+
+
+        .container-case {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    text-align: left;
+  }
+
+
+  .case-row {
+    display: flex;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  .case-row:last-child {
+    margin-bottom: 0;
+  }
+  .overlay-use {
+  position: absolute;
+  top:0;
+  width: 100%;
+  padding: 2rem;
+  color: #fff;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4), transparent);
+}
+.overlay-use h3 {
+  margin: 0rem;
+  font-size: 34px;
+text-transform: uppercase;
+font-weight: bolder;
+line-height: 1;
+}
+.overlay-use p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+
+  .case-card {
+    position: relative;
+    flex: 1;
+    height: 450px;
+    border-radius: 1px;
+    overflow: hidden;
+  }
+
+  .bg-layer {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.6);
+    transition: filter 0.3s ease;
+    background-repeat: no-repeat;
+  }
+
+
+  .bg-layer.portfolio { background-image: url('images/portfolio bg.png'); }
+  .bg-layer.youtube { background-image: url('images/ytchannel-bg.png'); }
+  .bg-layer.resume { background-image: url('images/onlinejob-bg.png'); }
+  .bg-layer.fitness { background-image: url('images/fitcoach-bg.png'); }
+  .bg-layer.influencer { background-image: url('images/influencer-bg.png'); }
+
+
+
+        footer {
+      background-color: #000;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 15px;
+    }
+
+    .footer-links a {
+      color: #aaa;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.3s ease;
+    }
+
+
+
+    .footer-copy {
+      font-size: 12px;
+      color: #555;
+    }
+
+    @media (max-width: 600px) {
+      .footer-links {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+    .container-text {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  max-width:  860px;
+}
+
+/* Document Section */
+.document-wrapper {
+
+}
+iframe{
+  height: 4000px;
+  max-width: 100%;
+  width: 100%;
+}
+.document h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+.document h3 {
+  margin-top: 2.7rem;
+  font-size: 1.25rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+.document p {
+  margin: 1rem 0;
+  line-height: 1.2;
+  font-weight: 660;
+  font-size: 14.2px;
+
+}
+.document ul {
+  padding-left: 1.25rem;
+  margin-top: 0.5rem;
+}
+.document ul li {
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+  font-size: 14.2px;
+}
+.document a {
+  color: #0066cc;
+  text-decoration: none;
+}
+.document a:hover {
+  text-decoration: underline;
+}
+.paragraph-about h1{
+  color: white;
+  font-size: 20px;
+  font-weight: bolder;
+  text-transform: uppercase;
+
+}
+
+
+.content-viewer {
+  width: 90%;
+  max-width: 860px;
+  margin: 120px auto 60px auto;
+  padding: 40px 30px;
+  color: #fff;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Headings */
+.content-viewer h1,
+.content-viewer h2,
+.content-viewer h3 {
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-top: 30px;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+}
+
+.contnet-viewer h1{
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 46px;
+  letter-spacing: 0.8
+}
+
+/* Paragraphs */
+.content-viewer p {
+  margin: 15px 0;
+  font-size: 15.5px;
+  line-height: 1.7;
+  font-weight: 600;
+}
+
+/* Strong/Bold text */
+.content-viewer strong,
+.content-viewer b {
+  color: #fff;
+  font-weight: 800;
+}
+
+/* Lists */
+.content-viewer ul {
+  margin: 15px 0 15px 20px;
+  padding-left: 20px;
+}
+
+.content-viewer ul li {
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Links */
+.content-viewer a {
+  color: #00bfff;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.content-viewer a:hover {
+  color: #00ffff;
+  text-decoration: none;
+}
+
+/* Blockquote (optional) */
+.content-viewer blockquote {
+  border-left: 3px solid #555;
+  padding-left: 15px;
+  margin: 20px 0;
+  color: #aaa;
+  font-style: italic;
+}
+
+.blog-card {
+  background: #111;
+  padding: 25px;
+  margin-bottom: 20px;
+  border: 1px solid #222;
+  border-radius: 6px;
+  color: #fff;
+}
+
+.blog-card h2 {
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.blog-card p {
+  font-size: 14.5px;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+.blog-card a {
+  color: #00b7ff;
+  text-decoration: none;
+  font-weight: bold;
+}
